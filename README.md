@@ -1,73 +1,66 @@
-# Welcome to your Lovable project
+# 🌐 Priti Portfolio
 
-## Project info
+This is my personal portfolio website designed to showcase my projects, technical skills, and experience in Web Development, Artificial Intelligence, and Software Engineering.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+The portfolio highlights my work, provides insights into my technical capabilities, and serves as a central place to explore my development journey.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 🚀 About the Project
 
-**Use Lovable**
+This portfolio is built with a focus on clean design, responsiveness, and performance. It demonstrates my ability to build modern web applications using industry-relevant technologies.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+The website includes sections for projects, skills, education, and contact, making it easy to understand my profile as a developer.
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## ✨ Features
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- Modern and visually appealing user interface  
+- Fully responsive design for all devices  
+- Smooth navigation and user experience  
+- Dedicated sections for projects and skills  
+- Fast and optimized performance  
+- Contact section for easy communication  
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## 🛠️ Tech Stack
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- **Frontend:** React, TypeScript  
+- **Styling:** Tailwind CSS, shadcn-ui  
+- **Build Tool:** Vite  
+- **Version Control:** Git and GitHub  
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+---
 
-# Step 3: Install the necessary dependencies.
-npm i
+## 📂 Project Structure
+priti-portfolio/
+│── public/
+│── src/
+│ ├── components/
+│ ├── pages/
+│ ├── assets/
+│ └── App.tsx
+│── package.json
+│── vite.config.ts
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+
+
+## ⚙️ Installation and Setup
+
+To run this project locally, follow these steps:
+
+```bash
+git clone https://github.com/Priti30-ai/priti-portfolio.git
+cd priti-portfolio
+npm install
 npm run dev
-```
 
-**Edit a file directly in GitHub**
+📬 Contact
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+If you would like to connect or collaborate, feel free to reach out:
 
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Email: ahirepritiii@gmail.com
+LinkedIn: https://linkedin.com/in/ahire-priti
+GitHub: https://github.com/Priti30-ai
