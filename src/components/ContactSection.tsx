@@ -5,13 +5,26 @@ import { Mail, Github, Linkedin, Send } from "lucide-react";
 const ContactSection = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
+
   const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [showSuccess, setShowSuccess] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // placeholder
-    alert("Thank you for reaching out! I'll get back to you soon.");
+
+    if (!form.name || !form.email || !form.message) {
+      alert("Please fill in all fields.");
+      return;
+    }
+
+    // Simulate successful submission
+    setShowSuccess(true);
+
+    // Clear the form
     setForm({ name: "", email: "", message: "" });
+
+    // Hide success message after 3 seconds
+    setTimeout(() => setShowSuccess(false), 3000);
   };
 
   return (
@@ -22,7 +35,9 @@ const ContactSection = () => {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-sm font-mono text-primary mb-2 tracking-widest uppercase">Contact</p>
+          <p className="text-sm font-mono text-primary mb-2 tracking-widest uppercase">
+            Contact
+          </p>
           <h2 className="text-3xl sm:text-4xl font-bold font-display mb-4">
             Let's <span className="gradient-text">connect</span>
           </h2>
@@ -38,7 +53,7 @@ const ContactSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="space-y-5"
+            className="space-y-5 relative"
           >
             <div>
               <label className="text-sm text-muted-foreground mb-1.5 block">Name</label>
@@ -52,6 +67,7 @@ const ContactSection = () => {
                 placeholder="Your name"
               />
             </div>
+
             <div>
               <label className="text-sm text-muted-foreground mb-1.5 block">Email</label>
               <input
@@ -64,6 +80,7 @@ const ContactSection = () => {
                 placeholder="your@email.com"
               />
             </div>
+
             <div>
               <label className="text-sm text-muted-foreground mb-1.5 block">Message</label>
               <textarea
@@ -76,6 +93,7 @@ const ContactSection = () => {
                 placeholder="Your message..."
               />
             </div>
+
             <button
               type="submit"
               className="gradient-bg text-primary-foreground px-6 py-3 rounded-lg font-medium hover:opacity-90 transition-all flex items-center gap-2"
@@ -83,6 +101,13 @@ const ContactSection = () => {
               <Send size={18} />
               Send Message
             </button>
+
+            {/* Success message */}
+            {showSuccess && (
+              <div className="absolute top-0 right-0 mt-2 p-4 bg-green-100 border border-green-300 text-green-800 rounded-lg shadow-lg transition-all">
+                ✅ Your message has been sent successfully!
+              </div>
+            )}
           </motion.form>
 
           {/* Info */}

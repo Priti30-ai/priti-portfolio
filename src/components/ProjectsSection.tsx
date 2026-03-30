@@ -6,47 +6,45 @@ const projects = [
   {
     title: "AgroShop – Agriculture E-Commerce Platform",
     description:
-      "A fully functional agriculture-focused e-commerce platform that enables farmers to purchase fertilizers, pesticides, and herbicides with ease. Includes product details, cart management, and SMS/email notifications after order placement.",
+      "A fully functional agriculture-focused e-commerce platform that enables farmers to purchase fertilizers, pesticides, and herbicides with ease.",
     tech: ["HTML", "CSS", "JavaScript", "Tailwind CSS", "PHP", "MySQL"],
     features: [
-      "Product catalog with detailed descriptions",
-      "Cart & order management system",
+      "Product catalog",
+      "Cart & order management",
       "SMS & Email notifications",
-      "Integrated agriculture resources",
-      "Responsive user interface"
+      "Agriculture resources",
+      "Responsive UI"
     ],
-    github: "#",
-    demo: "#",
+    github: "https://github.com/Priti30-ai/Agrishop",
+    demo: "", // no demo yet
   },
   {
     title: "AI Generated Image Detection System",
     description:
-      "An AI/ML-based system that detects whether an uploaded image is real or AI-generated using a Convolutional Neural Network (CNN) model.",
+      "AI/ML system to detect whether an image is real or AI-generated using CNN.",
     tech: ["Python", "TensorFlow/Keras", "CNN", "AI/ML"],
     features: [
-      "Image upload interface",
+      "Image upload",
       "Real vs Fake classification",
-      "Deep learning model integration",
-      "Data preprocessing pipeline",
-      "Prediction result display"
+      "Deep learning model",
+      "Prediction display"
     ],
-    github: "#",
-    demo: "#",
+    github: "", // add later
+    demo: "",
   },
   {
-    title: "Civic Issues Reporting & Resolution Platform",
+    title: "Civic Issues Reporting Platform",
     description:
-      "A civic issue management system consisting of a React Native mobile app for citizens and a MERN stack web dashboard for administrators to track, manage, and resolve reported issues efficiently.",
+      "MERN + React Native system for reporting and managing civic issues.",
     tech: ["React Native", "React.js", "Node.js", "Express.js", "MongoDB"],
     features: [
-      "Issue upload with image & location",
-      "Real-time status tracking",
-      "Admin & employee dashboard",
-      "Issue status updates",
-      "User notification system"
+      "Issue upload with location",
+      "Real-time tracking",
+      "Admin dashboard",
+      "Notifications"
     ],
-    github: "#",
-    demo: "#",
+    github: "",
+    demo: "",
   },
 ];
 
@@ -79,20 +77,20 @@ const ProjectsSection = () => {
               transition={{ duration: 0.5, delay: 0.1 + i * 0.1 }}
               className="glass rounded-xl p-8 hover:glow transition-all duration-300 group flex flex-col hover:-translate-y-2"
             >
-              <h3 className="text-2xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors">
+              <h3 className="text-2xl font-bold mb-4 group-hover:text-primary">
                 {project.title}
               </h3>
 
-              <p className="text-base text-muted-foreground mb-6 leading-relaxed">
+              <p className="text-muted-foreground mb-6">
                 {project.description}
               </p>
 
               {/* Features */}
-              <div className="flex flex-wrap gap-3 mb-6">
+              <div className="flex flex-wrap gap-2 mb-6">
                 {project.features.map((feature) => (
                   <span
                     key={feature}
-                    className="text-sm px-3 py-2 rounded bg-primary/10 text-primary"
+                    className="text-xs px-3 py-1 rounded bg-primary/10 text-primary"
                   >
                     {feature}
                   </span>
@@ -100,7 +98,7 @@ const ProjectsSection = () => {
               </div>
 
               {/* Tech stack */}
-              <div className="flex flex-wrap gap-3 mb-8 mt-auto">
+              <div className="flex flex-wrap gap-3 mb-6">
                 {project.tech.map((tech) => (
                   <span
                     key={tech}
@@ -112,24 +110,28 @@ const ProjectsSection = () => {
               </div>
 
               {/* Links */}
-              <div className="flex items-center gap-6">
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-base text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  <Github size={18} /> Code
-                </a>
+              <div className="flex gap-6 mt-auto">
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 hover:text-primary transition"
+                  >
+                    <Github size={18} /> Code
+                  </a>
+                )}
 
-                <a
-                  href={project.demo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-base text-primary hover:text-accent transition-colors"
-                >
-                  <ExternalLink size={18} /> Live Demo
-                </a>
+                {project.demo && (
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-primary hover:text-accent transition"
+                  >
+                    <ExternalLink size={18} /> Live
+                  </a>
+                )}
               </div>
             </motion.div>
           ))}
